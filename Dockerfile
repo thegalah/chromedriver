@@ -7,4 +7,4 @@ RUN apk update && \
     apk add python py-pip curl unzip libexif udev chromium chromium-chromedriver xvfb && \
     pip install selenium && \
     pip install pyvirtualdisplay
-ENTRYPOINT ["chromedriver", "--port=9515"]
+ENTRYPOINT ["chromedriver", "--whitelisted-ips", "--port=9515"]
